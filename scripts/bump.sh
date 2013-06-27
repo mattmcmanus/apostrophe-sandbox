@@ -12,9 +12,7 @@ remote="origin"
 [ ! -d 'node_modules' ] && echo "ERROR: There is no node_modules folder. Are you running from project root?" && exit 1
 
 # We need a module
-if [ ! $1 ]; then
-  echo $USAGE && exit 1
-fi
+[ ! $1 ] && echo $USAGE && exit 1
 
 module=$1
 modDir="`pwd`/node_modules/$module"
